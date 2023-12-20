@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*let ar=[1,2,3,4,5,6,7,8,9,10];
+let search=prompt("which index number find ");
+document.writeln(ar.indexOf(6));  // static
+document.writeln(ar.indexOf(+search)); //dynamic
+*/
+
+let ar1=[11,22,33,44,55,66,77,88,99];
+/*let search1=prompt("enter the number ");
+document.writeln(ar1.includes(+search1));  // number is present in array output show true or false
+*/ 
+
+/*let ar2=[1,2,"mahesh",5,6,7];
+ar2.splice(1,1);
+document.writeln(ar2+"<br>");
+
+ar1.splice(1,5);
+document.writeln(ar1+"<br>");
+*/
+
+let practice=[{name:" Mahesh ", native:"Pune"},{name:" Ramkisan ", native:"Ambora"},{name:"Babanrao",native:"Ambora"}];
+practice.forEach(ele=>{document.writeln("My name is "+ele.name +"AND my native "+ele.native+"<br>")});
+
+let obj =[{city :"maharastra" , bestplace:"PUNE"},
+            {BestBike:"GT20", avrage:"35km"},
+            {jsteacher:"shree sir" , native:"qspider" }]
+       
+     obj.forEach(ele=>{document.writeln("My city= "+ele.city +"<br>"+"BestPlace in=  "+ele.bestplace +"<br>"+"My favourite Bike= "+ele.BestBike+"<br>"+"His avg is= "+ele.avrage+"<br>"+"THE best js and java Teacher in qspider= "+ele.jsteacher+"<br>"+"BElongs to= "+ele.native)})
+
+
+
+
+
+ </script>
+</body>
+</html>
