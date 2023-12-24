@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Clock</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: rgba(207, 23, 63, 0.74);
+    }
+
+    #clock-container {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #clock {
+      font-size: 2em;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<div id="clock-container">
+  <div id="clock"></div>
+</div>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+    document.getElementById('clock').textContent = formattedTime;
+  }
+
+  function padZero(value) {
+    return value < 10 ? `0${value}` : value;
+  }
+
+  // Initial update
+  updateClock();
+
+  // Update the clock every second
+  setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="cnt"></h1>
+    <script type="text/javascript">
+        let dt=new Date();
+        document.writeln(dt.getDate());  
+        document.writeln(dt.getMonth()); 
+         document.writeln(dt.getFullYear()); 
+         document.writeln(dt.getHours());
+         document.writeln(dt.getSeconds); 
+           document.writeln(dt.getMilliseconds());
+
+        let tm= new Date();
+        let hr,mn,sc,ms;
+        let tim=document.getElementById("tm");
+        function updateTime()
+        {
+            hr=tm.getHours();
+            mn=tm.getSeconds();
+
+        }
+
+        /*let count =1;
+        let cnt =document.getElementById("cnt");
+        function increCount()
+        {
+                count++;
+                cnt.innerHTML=count;
+        }
+
+        document.writeln(count);
+        setInterval(increCount,500);*/
+    </script>
+</body>
+</html>
