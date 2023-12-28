@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Click to Show Heart</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #heart {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 220px; 
+            color: red;
+            cursor: pointer;
+            text-align: center;
+            animation: heartbeat 1s infinite ease-in-out;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {   opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="myinstapost.png" alt="Double Click Me" ondblclick="showHeart()" onmouseleave="reset()">
+    <div id="heart">&#10084;</div>
+
+    <script>
+        let heart = document.getElementById("heart");
+
+        function showHeart() {
+            heart.style.display = "block";
+        }
+
+        function reset() {
+            heart.style.display = "none";
+        }
+    </script>
+</body>
+</html>
