@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center" style="margin-top: 100px;">
+        <h1 id="count">0</h1>
+        <button onclick="increCount()">INCREMENT</button>
+        <button onclick="decreCount()">DECREMENT</button>
+    </div>
+    <script type="text/javascript">
+        let count1 = document.getElementById("count");
+        let count = parseInt(count1.innerHTML);
+
+        function increCount() {
+            count1.innerHTML = ++count;
+            console.log(count);
+        } function decreCount() {
+            count1.innerHTML = --count;
+            console.log(count);
+        }
+
+        /*   function increCount() {
+        
+                ct.innerHTML=++count
+        }
+
+           function decreCount() {
+            count1.innerHTML = --count;
+            console.log(count);
+        }*/
+
+    </script>
+</body>
+</html>
